@@ -1,0 +1,81 @@
+---
+title: "MENTOR Report for the Texas Mentoring Partnership"
+author: "MENTOR, Mike Garringer, Samuel D. McQuillin"
+date: "Friday, March 11, 2016"
+toc: true
+output: pdf_document
+---
+```{r, echo=FALSE}
+# A Prefix nulling hook.
+
+# Make sure to keep the default for normal processing.
+default_output_hook <- knitr::knit_hooks$get("output")
+
+# Output hooks handle normal R console output.
+knitr::knit_hooks$set( output = function(x, options) {
+
+  comment <- knitr::opts_current$get("comment")
+  if( is.na(comment) ) comment <- ""
+  can_null <- grepl( paste0( comment, "\\s*\\[\\d?\\]" ),
+                     x, perl = TRUE)
+  do_null <- isTRUE( knitr::opts_current$get("null_prefix") )
+  if( can_null && do_null ) {
+    # By default R print output aligns at the right brace.
+    align_index <- regexpr( "\\]", x )[1] - 1
+    # Two cases: start or newline
+    re <- paste0( "^.{", align_index, "}\\]")
+    rep <- comment
+    x <- gsub( re, rep,  x )
+    re <- paste0( "\\\n.{", align_index, "}\\]")
+    rep <- paste0( "\n", comment )
+    x <- gsub( re, rep,  x )
+  }
+
+  default_output_hook( x, options )
+
+})
+
+knitr::opts_template$set("kill_prefix"=list(comment=NA, null_prefix=TRUE))
+```
+
+#Executive Summary
+This report is a summary of responses from the mentoring partners in the state of Texas who completed the national survey of mentoring conducted by MENTOR, the national mentoring organization. The report is organized to review 1) aggregate agency information, 2) aggregate program information, and 3) state-specific questions.
+
+#Tables
+This is an example table, that can display simple frequencies and/or differences between items.^[This is an example footnote or clarification that might be better served outside of the main body of text.]
+```{r, echo=FALSE}
+df <- data.frame(
+  group = c("School-Based Programs", "Community Based Programs", "Faith-Based Organizations", "Other Programs"),
+  value = c(300, 200, 175, 15)
+)
+knitr::kable(head(df))
+```
+
+#Pie Charts
+Example pie chart of program makeup. We can replace percentages, for counts, have both, etc. Everything is customizable. 
+
+```{r, echo=FALSE}
+library(ggplot2)
+df <- data.frame(
+  group = c("School-Based Programs", "Community Based Programs", "Faith-Based Organizations", "Other Programs"),
+  value = c(300, 200, 175, 15)
+)
+
+bp<- ggplot(df, aes(x="", y=value, fill=group))+
+  geom_bar(width = 1, stat = "identity")
+
+pie <- bp + coord_polar("y", start=0)
+
+pie + scale_fill_grey() + theme_minimal()
+pie
+```
+
+#Basic Narratives with data imputed for readability. 
+
+Narratives could be used to explain data that we collected, such that numbers could be referenced after paragraphs or sentences that are dyanmically reported^[uniquely reported, based on code behind the scenes]. Example:the average number of programs reported was `r mean(df[,"value"])`, which is a value generated from a simple mean function.
+
+
+#Other things
+We can change the theme, if we need to, and consider other metrics like state level comparisons, etc.
+
+
