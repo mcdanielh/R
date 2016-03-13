@@ -1,0 +1,237 @@
+ID	Response ID
+TS	Time Started
+DS	Date Submitted
+STAT	Status
+CONTID	Contact ID
+LEGCOM	Legacy Comments
+COM	Comments
+LANG	Language
+REF	Referer
+EXREF	Extended Referer
+SESID	SessionID
+USAG	User Agent
+EXUSAG	Extended User Agent
+TAGS	Tags
+IP	IP Address
+LON	Longitude
+LAT	Latitude
+CONTR	Country
+CIT	City
+ST	State/Region
+PSTL	Postal
+NAME	Name of survey respondent:
+EMAIL	What is your email address?
+ORGPOS	What position do you hold in the organization/agency?
+ORGPOSOTH	Other - Write In:What position do you hold in the organization/agency?
+ORGNAME	What is the name of your organization/agency?
+ORGCIT	What city is your organization/agency based in?
+ORGST	Which state your organization/agency is based in?
+ORGZIP	What ZIP code is your organization/agency based in?
+NS1	NS1
+NS1O	Other - Write In:NS1
+NS2	NS2
+NS10	NS10
+NS3Q1	Academic support programs:NS3
+NS3Q2	After school/daycare programs:NS3
+NS3Q3	Case management:NS3
+NS3Q4	College and career readiness:NS3
+NS3Q5	Drop in center/homeless/runaway services:NS3
+NS3Q6	Education (Primary or Secondary school):NS3
+NS3Q7	Empowerment/leadership development:NS3
+NS3Q8	Foster care or services for foster youth:NS3
+NS3Q9	Independent living/transition-aged youth services:NS3
+NS3Q10	Medical/healthcare services:NS3
+NS3Q11	Mental health prevention and wellness:NS3
+NS3Q12	Outpatient psychiatric treatment:NS3
+NS3Q13	Positive youth development:NS3
+NS3Q14	Pregnancy prevention:NS3
+NS3Q15	Psychological counseling:NS3
+NS3Q16	Residential or inpatient psychiatric treatment:NS3
+NS3Q17	Service learning/volunteerism:NS3
+NS3Q18	Services for juvenile justice-involved youth:NS3
+NS3Q19	Services for pregnant and parenting teens:NS3
+NS3Q20	Services for youth with disabilities:NS3
+NS3Q21	Substance use disorder prevention or treatment:NS3
+NS3Q22	Violence prevention:NS3
+NS3Q23	Workforce development:NS3
+NS3QO	Other - Write In:NS3
+NS3QO1	Other - Write In:NS3
+NS4Q1	Media/Public relations:NS4
+NS4Q2	National Mentoring Month events and promotions:NS4
+NS4Q3	"Online outreach (Facebook, program website, etc.):NS4"
+NS4Q4	Community events and in-person presentations by staff:NS4
+NS4Q5	Referrals from community partners:NS4
+NS4Q6	Referrals from the Mentoring Connector database:NS4
+NS4Q7	Referrals from our local <em>Mentoring Partnership</em>:NS4
+NS4Q8	Volunteer Centers and other volunteer organizations:NS4
+NS4Q9	Word-of-mouth from current or former mentors:NS4
+NS4Q10	Other - Write In:NS4
+NS4Q11	Other - Write In:NS4
+NS5	NS5
+NS6Q1	MENTOR: The National Mentoring Partnership:NS6
+NS6Q2	State or Local Mentoring Partnership:NS6
+NS6Q3	National Mentoring Resource Center:NS6
+NS6Q4	United Way or other funding agency:NS6
+NS6Q7	For-profit consulting firm:NS6
+NS6Q	Nonprofit consulting firm:NS6
+NS6QO	Other - Write In:NS6
+NS6QO1	Other - Write In:NS6
+NS7Q1	Blending mentoring with other services:NS7
+NS7Q2	Cultural perspectives in service design and delivery:NS7
+NS7Q3	Developing meaningful activities for mentors and youth:NS7
+NS7Q4	Fundraising/grantwriting:NS7
+NS7Q5	General program design/theory of change:NS7
+NS7Q6	Integrating youth development principles:NS7
+NS7Q7	Making strong mentor-mentee matches:NS7
+NS7Q8	Mentor recruitment:NS7
+NS7Q9	Mentor training (including curriculum development):NS7
+NS7Q10	Offering mentoring in rural settings:NS7
+NS7Q11	Parent/family engagement:NS7
+NS7Q12	Partnership development:NS7
+NS7Q13	Professional development of staff:NS7
+NS7Q14	Program evaluation/data collection:NS7
+NS7Q15	Program sustainability/growth:NS7
+NS7Q16	Supporting mentor-mentee matches:NS7
+NS7Q1O	Other - Write In:NS7
+NS7QO1	Other - Write In:NS7
+NS8Q1	"Qualitative evaluation (examines participant experiences through interviews, end-of-year satisfaction surveys, case notes, focus groups, or other data sources):NS8"
+NS8Q2	"Implementation evaluation (examines how well or efficiently services were delivered to participants, such as tracking mentor-mentee meetings, participation in trainings, etc .):NS8"
+NS8Q3	Outcome evaluation (examines changes in participants served using pre-post data collection):NS8
+NS8Q4	Experimental or quasi-experimental  evaluation (compares mentored youth to a comparison or “control” group of non-mentored youth):NS8
+NS8Q5	"Return-on-investment study (examines long-term impacts from an economic perspective, often in relation to program costs):NS8"
+NS8Q6	We haven't engaged in any evaluation activities:NS8
+NS8QO	Other - Write In:NS8
+NS8QO1	Other - Write In:NS8
+NS9Q1	Executive Director/Program Coordinator:NS9
+NS9Q2	Staff evaluation specialist (internal staff):NS9
+NS9Q3	Professional external evaluator:NS9
+NS9Q4	Funding agency or philanthropy:NS9
+NS9Q5	Our local Mentoring Partnership:NS9
+NS9Q6	School or district staff:NS9
+NS9Q7	We have not done any evaluation work:NS9
+NS9QO	Other - Write In:NS9
+NS9QO1	Other - Write In:NS9
+OHA1Q1	Regular referral of mentors to Mentoring Center training:OHA1
+OHA1Q2	"Referral of mentors to the Mentoring Center’s <a href=""http://www.metoringcenterco.org"" target=""_blank"">website</a>:OHA1"
+OHA1Q3	Participation in Mentoring Month January Celebrations:OHA1
+OHA1Q4	Nomination of Outstanding Mentor and/or Mentee awards:OHA1
+OHA1Q5	Participation in January FunDay at OSU (for partner agencies only in central Ohio):OHA1
+OHA1Q6	Promotion of activities through Mentoring Center email alerts:OHA1
+OHA1Q7	E-newsletter:OHA1
+OHA1Q8	"Scheduling of on-site mentor/mentee training of life skill (goal-setting, leadership, etc.):OHA1"
+OHA1Q9	Sending mentors to the Mentoring Center for background checks:OHA1
+OHA1Q10	Referral of staff for background checks:OHA1
+OHA1Q11	Inclusion of the Mentoring Center in your grants or other supports:OHA1
+OHA1Q12	Attendance at a Design and Build session ( Element of Effective Practice for Mentoring) prior to becoming a partner agency:OHA1
+OHA2Q1	Mentors' expectations are (now) better aligned with what they are likely to encounter:OHA2
+OHA2Q2	Mentors understand appropriate roles for themselves:OHA2
+OHA2Q3	"Mentors see that their goal is to address the whole child, including coaching and life skills (e.g. decision-making):OHA2"
+OHA2Q4	Mentors have ideas for overcoming obstacles in achieving a relationship with their mentee:OHA2
+OHA2Q5	Mentors understand the importance of having fun as part of establishing a quality relationship with their mentee:OHA2
+OHA2Q6	Mentors have good understanding of when an issue needs to be reported to their agency program coordinator:OHA2
+OHA2QO	Other - Write In:OHA2
+OHA2QO1	Other - Write In:OHA2
+VAA1Q1	Mentor training:VAA1
+VAA1Q2	Program staff training:VAA1
+VAA1Q3	Consultation on new program development:VAA1
+VAA1Q4	Consultation on existing program capacity building:VAA1
+VAA1Q5	Technical assistance through the NMRC:VAA1
+VAA1Q6	AmeriCorps VISTA:VAA1
+VAA1Q7	Quality-Based Membership:VAA1
+VAA1Q8	Affiliate Membership:VAA1
+VAA1Q9	Newsletters:VAA1
+VAA1Q10	Website:VAA1
+VAA1Q11	Annual Event:VAA1
+VAA1Q12	Referrals:VAA1
+VAA2Q1	Mentor training:VAA2
+VAA2Q2	Program staff training:VAA2
+VAA2Q3	Consultation on new program development:VAA2
+VAA2Q4	Consultation on existing program development:VAA2
+VAA2Q5	Technical assistance through the NMRC:VAA2
+VAA2Q6	AmeriCorps VISTA:VAA2
+VAA2Q7	Quality-Based Membership:VAA2
+VAA2Q8	Affiliate Membership:VAA2
+VAA2Q9	Newsletters:VAA2
+VAA2Q10	Website:VAA2
+VAA2Q11	Annual Event:VAA2
+VAA2Q12	Referrals:VAA2
+VAA3Q1	Building blocks for mentoring programs (building a foundation in Elements of Effective Practice):VAA3
+VAA3Q2	Match support/mentor retention:VAA3
+VAA3Q3	Screening mentors:VAA3
+VAA3Q4	Volunteer and mentor recruitment:VAA3
+VAA3Q5	Program evaluation:VAA3
+VAA3QO	Other - Write In:VAA3
+VAA3QO1	Other - Write In:VAA3
+VAA4Q1	Becoming a more culturally competent mentor:VAA4
+VAA4Q2	Understanding youth culture:VAA4
+VAA4Q3	Walking with mentees on the path to college:VAA4
+VAA4Q4	"Child development, generational difference and communication:VAA4"
+VAA4Q5	Academic mentoring:VAA4
+VAA4QO	Other - Write In:VAA4
+VAA4QO1	Other - Write In:VAA4
+MNA1	MNA1
+MNA2NAME	Name:MNA2
+MNA2EMAIL	Email:MNA2
+MNA3Q1	Accessed in 2015 or currently access:Quality Mentoring Assessment Path (QMAP):MNA3
+MNA3Q2	Would like to access in the future:Quality Mentoring Assessment Path (QMAP):MNA3
+MNA3Q3	Accessed in 2015 or currently access:Training for staff:MNA3
+MNA3Q4	Would like to access in the future:Training for staff:MNA3
+MNA3Q5	Accessed in 2015 or currently access:Training for mentors:MNA3
+MNA3Q6	Would like to access in the future:Training for mentors:MNA3
+MNA3Q7	Accessed in 2015 or currently access:Training for mentees:MNA3
+MNA3Q8	Would like to access in the future:Training for mentees:MNA3
+MNA3Q9	Accessed in 2015 or currently access:Training webinars:MNA3
+MNA3Q10	Would like to access in the future:Training webinars:MNA3
+MNA3Q11	Accessed in 2015 or currently access:Minnesota Mentoring Conference:MNA3
+MNA3Q12	Would like to access in the future:Minnesota Mentoring Conference:MNA3
+MNA3Q13	Accessed in 2015 or currently access:Program consultation or technical assistance:MNA3
+MNA3Q14	Would like to access in the future:Program consultation or technical assistance:MNA3
+MNA3Q15	Accessed in 2015 or currently access:E-Newsletters:MNA3
+MNA3Q16	Would like to access in the future:E-Newsletters:MNA3
+MNA3Q17	Accessed in 2015 or currently access:Resources (online and printed):MNA3
+MNA3Q18	Would like to access in the future:Resources (online and printed):MNA3
+MNA3Q19	Accessed in 2015 or currently access:Website listing for mentoring program:MNA3
+MNA3Q20	Would like to access in the future:Website listing for mentoring program:MNA3
+MNA3Q21	Accessed in 2015 or currently access:Tools to support recruitment and public awareness campaigns:MNA3
+MNA3Q22	Would like to access in the future:Tools to support recruitment and public awareness campaigns:MNA3
+MNA3Q23	Accessed in 2015 or currently access:Grant writing assistance / Letters of support for funding proposals:MNA3
+MNA3Q24	Would like to access in the future:Grant writing assistance / Letters of support for funding proposals:MNA3
+MNA3Q25	Accessed in 2015 or currently access:Referrals to funding opportunities:MNA3
+MNA3Q26	Would like to access in the future:Referrals to funding opportunities:MNA3
+MNA3Q27	Accessed in 2015 or currently access:Alerts about upcoming legislation or public policy activities:MNA3
+MNA3Q28	Would like to access in the future:Alerts about upcoming legislation or public policy activities:MNA3
+MNA3Q29	Accessed in 2015 or currently access:Opportunities to network with other mentoring organizations:MNA3
+MNA3Q30	Would like to access in the future:Opportunities to network with other mentoring organizations:MNA3
+MNA4	MNA4
+MNA6Q1	"None, we did not engage advocacy or public policy activities in 2015:MNA6"
+MNA6Q2	"Tracking local, state or federal policies:MNA6"
+MNA6Q3	Attending public policy forums or information meetings:MNA6
+MNA6Q4	Building relationships with local and/or state policy makers:MNA6
+MNA6Q5	Responding to action alerts from advocacy groups:MNA6
+MNA6Q6	"Lobbying for legislation or policy initiatives at the local, state or federal level:MNA6"
+MNA6Q7	Proposing state or federal legislation:MNA6
+MNA6QO	Other - Write In:MNA6
+MNA6QO1	Other - Write In:MNA6
+MNA5	MNA5
+TXA1	TXA1
+GAA1Q1	Program start-up assistance:GAA1
+GAA1Q2	Program consultation / technical assistance:GAA1
+GAA1Q3	Training:GAA1
+GAA1Q4	Grants / financial awards:GAA1
+GAA1Q5	Sharing funding opportunities:GAA1
+GAA1Q6	Cultural competency and inclusion resources:GAA1
+GAA1Q7	Match activities:GAA1
+GAA1Q8	Government advocacy:GAA1
+GAA1Q9	Public awareness / mentor recruitment campaigns:GAA1
+GAA1Q10	"Partnership development (e.g., businesses, schools, legislators):GAA1"
+GAA1Q11	Research on youth mentoring:GAA1
+GAA1Q12	Data from a scan / landscape analysis of mentoring organizations in Georgia:GAA1
+GAA1Q13	Networking:GAA1
+GAA1QO	Other - Write In (Required):GAA1
+GAA1QO1	Other - Write In (Required):GAA1
+GAA2Q1	For the Board:GAA2
+GAA2Q2	For paid staff:GAA2
+GAA2Q3	For mentors:GAA2
+GAA3Q1	On our board:GAA3
+GAA3Q2	Within our staff:GAA3
+GAA3Q3	Within our mentors:GAA3
