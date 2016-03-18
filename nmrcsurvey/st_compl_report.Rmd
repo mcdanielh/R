@@ -26,3 +26,6 @@ knitr::kable(k,col.names=c("Status","Number of Surveys"),caption="Table of Surve
 ```{r, echo=FALSE}
 knitr::kable(stdfm$ORGNAME,caption="Organizations Completed")
 ```
+```{r, echo=FALSE}
+knitr::kable(stdfm$ORGNAME,caption="Organizations Completed")
+```
