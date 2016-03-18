@@ -1,0 +1,28 @@
+---
+title: "NMRC Survey State Level Completion Report"
+author: "Samuel McQuillin"
+date: "March 18, 2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r, echo=FALSE}
+setwd("C:/Users/Sam/R/nmrcsurvey")
+source("mergeclean.R")
+statefun("WI")
+```
+#Completion Report for `r stdfm[1,20]` State
+
+Total number of surveys started: `r dim(stdfm)[1]` 
+
+
+```{r, echo=FALSE}
+ k<-as.data.frame(table(stdfm$STAT))
+knitr::kable(k,col.names=c("Status","Number of Surveys"),caption="Table of Surveys completed and Still in Progress")
+```
+
+```{r, echo=FALSE}
+knitr::kable(stdfm$ORGNAME,caption="Organizations Completed")
+```
