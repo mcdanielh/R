@@ -9,9 +9,12 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ```{r, echo=FALSE}
-setwd("C:/Users/Sam/R/nmrcsurvey")
+#Dr. McQuillins UH Office Source
+#setwd("C:/R/nmrcsurvey")
+#Dr. McQuillin's Home Computer
+#setwd("C:/Users/Sam/R/nmrcsurvey")
 source("mergeclean.R")
-statefun("WI")
+statefun("IL")
 ```
 #Completion Report for `r stdfm[1,20]` State
 
@@ -23,6 +26,7 @@ Total number of surveys started: `r dim(stdfm)[1]`
 knitr::kable(k,col.names=c("Status","Number of Surveys"),caption="Table of Surveys completed and Still in Progress")
 ```
 
+NOTE: Survey respondents who did NOT include a name are NOT reported in table below.
 ```{r, echo=FALSE}
-knitr::kable(stdfm$ORGNAME,caption="Organizations Completed")
+knitr::kable(subset(stdfm, STAT=="Partial" & ORGNAME!="",select=c(ORGNAME,EMAIL)),caption="Organizations Who are Partially Completed",row.names=FALSE)
 ```
