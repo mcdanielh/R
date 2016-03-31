@@ -1,0 +1,33 @@
+---
+title: "NMRC Survey State Level Completion Report"
+author: "Samuel McQuillin"
+date: "March 25, 2016, 11:06AM"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r, echo=FALSE}
+#Dr. McQuillins UH Office Source
+#setwd("C:/R/nmrcsurvey")
+#Dr. McQuillin's Home Computer
+setwd("C:/Users/Sam/R/nmrcsurvey")
+source("mergeclean.R")
+statefun("MD")
+```
+#Completion Report for `r stdfm[1,20]` State
+
+Total number of surveys started: `r dim(stdfm)[1]` 
+
+
+```{r, echo=FALSE}
+ k<-as.data.frame(table(stdfm$STAT))
+knitr::kable(k,col.names=c("Status","Number of Surveys"),caption="Table of Surveys completed and Still in Progress")
+```
+
+NOTE: Survey respondents who did NOT include a name (personal or organization) or an email are NOT reported in table below.
+```{r, echo=FALSE}
+stdfmo<-stdfm[order(stdfm$STAT),]
+knitr::kable(subset(stdfmo,ORGNAME!="",select=c(ORGNAME,STAT,EMAIL)),caption="List of Organizations and Completion Status",row.names=FALSE,col.names=c("Organization Name","Completion Status", "Email"))
+```
