@@ -267,6 +267,12 @@ dfm1<-rename(df1,
                "Response.ID"="ID",                                                                                                                                                                                                                                     
                "Date"="DTp",                                                                                                                                                                                                                                            
                "Status"="STATp", 
+               "URL.Variable.._cldee"="URL1p",
+               "URL.Variable.._iseditlink"="URL2p", 
+               "URL.Variable..ct"="URL3p",
+               "URL.Variable..mc_cid"="URL4p",
+               "URL.Variable..mc_eid"="URL5p",
+               "URL.Variable..slanguage"="URL6p", 
                "URL.Variable..snc"="URLp",
                "How.many.of.these.mentoring.programs.would.you.like.to.report.on.in.this.survey."="NUMp",                                                                                                                                                                
                "What.is.the.name.of.this.mentoring.program."="NAMEp",                                                                                                                                                                                                     
@@ -764,6 +770,6 @@ dfm1<-rename(df1,
 dfm<-merge(x=dfm2,y=dfm1,by="ID",all=TRUE)
 remove(df1,df2,dfm1)
 statefun<-function(state){
-	stdfm<<-subset(dfm2,ST==state)
+	stdfm<<-subset(dfm,ST==state)
 
 }

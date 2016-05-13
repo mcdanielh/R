@@ -1,8 +1,9 @@
 ---
 title: "NMRC Survey State Level Completion Report"
 author: "Samuel McQuillin"
-date: "March 25, 2016, 11:06AM"
+date: "May 11, 2016, 10:06AM"
 output: pdf_document
+classoption: landscape
 ---
 
 ```{r setup, include=FALSE}
@@ -13,8 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
 #setwd("C:/R/nmrcsurvey")
 #Dr. McQuillin's Home Computer
 setwd("C:/Users/Sam/R/nmrcsurvey")
-source("mergeclean.R")
-statefun("MD")
+source("mergeclean2.R")
+statefun("CO")
 ```
 #Completion Report for `r stdfm[1,20]` State
 
@@ -22,6 +23,7 @@ Total number of surveys started: `r dim(stdfm)[1]`
 
 
 ```{r, echo=FALSE}
+
  k<-as.data.frame(table(stdfm$STAT))
 knitr::kable(k,col.names=c("Status","Number of Surveys"),caption="Table of Surveys completed and Still in Progress")
 ```
