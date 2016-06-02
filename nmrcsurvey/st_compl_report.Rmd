@@ -1,7 +1,7 @@
 ---
 title: "NMRC Survey State Level Completion Report"
 author: "Samuel McQuillin"
-date: "May 11, 2016, 10:06AM"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
 classoption: landscape
 ---
@@ -14,10 +14,10 @@ knitr::opts_chunk$set(echo = TRUE)
 #setwd("C:/R/nmrcsurvey")
 #Dr. McQuillin's Home Computer
 setwd("C:/Users/Sam/R/nmrcsurvey")
-source("mergeclean2.R")
-statefun("CO")
+source("mergeclean.R")
+statefun("Minnesota")
 ```
-#Completion Report for `r stdfm[1,20]` State
+#Completion Report for `r stdfm[1,28]` State
 
 Total number of surveys started: `r dim(stdfm)[1]` 
 

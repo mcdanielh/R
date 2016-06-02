@@ -768,8 +768,29 @@ dfm1<-rename(df1,
                ))    
 #finally, merge the data 
 dfm<-merge(x=dfm2,y=dfm1,by="ID",all=TRUE)
-remove(df1,df2,dfm1)
+remove(df1,df2)
 statefun<-function(state){
-	stdfm<<-subset(dfm,ST==state)
+	stdfm<<-subset(dfm,ORGST==state)
 
 }
+
+
+#function to change values from factor to
+#characte then numeric, replacing any commas
+#that folks put in (i.e. 10,000)
+ 
+chng<-function(a){
+	as.numeric(gsub(",","", as.character(a)))
+}
+
+#create a new dataframe that will be used for 
+#calculations 
+
+dfj<-data.frame(chng(dfm$MALEp),
+	chng(dfm$FEMALEp),
+	chng(dfm$TRANMp),
+	chng(dfm$TRANFp),
+	chng(dfm$OTHGENDp))
+dfj$SUM<-rowSums(dfj[,1:5],na.rm=TRUE)
+colnames(dfj)<-c("MALE","FEMALE","TRANM","TRANF","OTHGEND","SUM")
+dfm<-cbind(dfm,dfj)

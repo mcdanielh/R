@@ -1,0 +1,422 @@
+---
+title: 'Vermont Priority Program Question Results'
+author: "Samuel McQuillin"
+date: "May 16, 2016"
+output: pdf_document
+digits: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
+```
+```{r, echo=FALSE}
+#Dr. McQuillins UH Office Source
+#setwd("C:/R/nmrcsurvey")
+#Dr. McQuillin's Home Computer
+setwd("C:/Users/Sam/R/nmrcsurvey")
+source("mergeclean.R")
+statefun("Vermont")
+getmode <- function(v) {
+   uniqv <- unique(v)
+   uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+stdfmcom<-stdfm[ which(stdfm$STAT=="Complete"),]
+library(ggplot2)
+stdfmcom$MODELp<-factor(stdfmcom$MODELp,
+                  levels=c(1,2,3,4,5,6,7),
+                  labels=c("1-to-1",
+                  "Group",
+                  "Blended",
+                  "Team","Electronic","X-age peer",
+                  "Other"))
+
+
+stdfmcom$FREQpQ4<-factor(stdfmcom$FREQpQ4,
+                  levels=c(1,2,3,4,5),
+                  labels=c("Less than 25%",
+                  "25-50%",
+                  "51-75%",
+                  "76-90%",
+                  "More than 90%"))
+
+stdfmcom$STAFFpQ6<-factor(stdfmcom$STAFFpQ6,
+                  levels=c(1,2,3),
+                  labels=c("Increase",
+                  "Stay the same",
+                  "Decrease"))
+
+stdfmcom$YOUTHINCpQ1<-factor(stdfmcom$YOUTHINCpQ1,
+                  levels=c(1,2,3),
+                  labels=c("Increase",
+                  "Stay the same",
+                  "Decrease"))
+
+
+stdfmcom$BUDGpQ2<-factor(stdfmcom$BUDGpQ2,
+                  levels=c(1,2,3,4),
+                  labels=c("Increased",
+                  "Stayed roughly the same",
+                  "Fluctuated",
+                  "Decreased"))
+
+stdfmcom$BUDGpQ4<-factor(stdfmcom$BUDGpQ4,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+
+stdfmcom$BUDGpQ5<-factor(stdfmcom$BUDGpQ5,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ6<-factor(stdfmcom$BUDGpQ6,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ7<-factor(stdfmcom$BUDGpQ7,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ8<-factor(stdfmcom$BUDGpQ8,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ9<-factor(stdfmcom$BUDGpQ9,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ10<-factor(stdfmcom$BUDGpQ10,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ11<-factor(stdfmcom$BUDGpQ11,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ12<-factor(stdfmcom$BUDGpQ12,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ13<-factor(stdfmcom$BUDGpQ13,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ14<-factor(stdfmcom$BUDGpQ14,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ15<-factor(stdfmcom$BUDGpQ15,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+stdfmcom$BUDGpQ16<-factor(stdfmcom$BUDGpQ16,
+                  levels=c(1,2,3,4,5,6),
+                  labels=c("Under 10%",
+                  "10-25%",
+                  "26-50%",
+                  "51-75%",
+                  "76-90%",
+                  "Over 90%"))
+
+
+```
+
+
+```{r, echo=FALSE}
+bar <- ggplot(stdfmcom, aes(factor(MODELp)))
+bar+geom_bar()+labs(title="Type of Mentoring Program",x="Type",y="Number of Programs Reporting")
+```
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$MODELp)))
+knitr::kable(k,col.names=c("Model","Proportion"),digits=2)
+```
+
+```{r, echo=FALSE}
+bar <- ggplot(stdfmcom, aes(YEARSp))
+bar+geom_bar()+labs(title="Number of years program has been active",x="Years",y="Frequency")
+```
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$YEARSp)))
+knitr::kable(k,col.names=c("Years","Proportion"),digits=2)
+```
+
+#Top four program focus by frequency and percent
+
+ Focus                | Frequency     | Proportion
+ -------------        | ------------- | ------------- |   
+ Academic enrichment  | `r sum(stdfmcom$GOALSpQ1,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ1,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Career exploration   | `r sum(stdfmcom$GOALSpQ2,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ2,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Civic engagement     | `r sum(stdfmcom$GOALSpQ3,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ3,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)` 
+ College access       | `r sum(stdfmcom$GOALSpQ4,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ4,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)` 
+ Educational Attainment  | `r sum(stdfmcom$GOALSpQ5,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ5,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Family support  | `r sum(stdfmcom$GOALSpQ6,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ6,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ General youth development  | `r sum(stdfmcom$GOALSpQ7,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ7,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Identity development  | `r sum(stdfmcom$GOALSpQ8,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ8,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Juvenile justice/re-entry  | `r sum(stdfmcom$GOALSpQ9,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ9,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Leadership development  | `r sum(stdfmcom$GOALSpQ10,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ10,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Life skills/social skills  | `r sum(stdfmcom$GOALSpQ11,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ11,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Literacy  | `r sum(stdfmcom$GOALSpQ12,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ12,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Mental health and well-being  | `r sum(stdfmcom$GOALSpQ13,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ13,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Positive health behaviors  | `r sum(stdfmcom$GOALSpQ14,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ14,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Pregnancy prevention  | `r sum(stdfmcom$GOALSpQ15,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ15,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Providing a caring adult relationship  | `r sum(stdfmcom$GOALSpQ16,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ16,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Recreational activities  | `r sum(stdfmcom$GOALSpQ17,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ17,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Resiliency  | `r sum(stdfmcom$GOALSpQ18,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ18,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ STEM education   | `r sum(stdfmcom$GOALSpQ19,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ19,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Substance use/abuse  | `r sum(stdfmcom$GOALSpQ20,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ20,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Violence prevention   | `r sum(stdfmcom$GOALSpQ21,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ21,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Other  | `r sum(stdfmcom$GOALSpQ22,na.rm=TRUE)`  | `r round(sum(stdfmcom$GOALSpQ22,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+
+#Percent of matches that met the minimum length
+
+
+Overall average: %`r round(((mean(as.numeric(stdfmcom$FREQpQ4),na.rm=TRUE)-1)*25),digits=2)`
+
+```{r, echo=FALSE}
+bar <- ggplot(stdfmcom, aes(factor(FREQpQ4)))
+bar+geom_bar()+labs(title="Percent matches that met minimum length",x="Percent",y="Number of Programs Reporting")
+```
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$FREQpQ4)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+#Average length of matches
+
+Median Duration: `r round(median(as.numeric(stdfmcom$FREQpQ15),na.rm=TRUE),digits=2)`  
+Modal Duration: `r round(getmode(as.numeric(stdfmcom$FREQpQ15)),digits=2)`  
+Mean Duration: `r round(mean(as.numeric(stdfmcom$FREQpQ15),na.rm=TRUE),digits=2)`  
+NOTE: 2 Outliers exceed 150 months
+
+```{r, echo=FALSE}
+bar <- ggplot(stdfmcom, aes(FREQpQ15))
+bar+geom_histogram(bins=10)+labs(title="Average Duration of Matches",x="Duration in Months",y="Frequency") +
+  scale_x_continuous(breaks=seq(0,55,5),lim=c(0,55))
+```
+
+#Reasons for Matches Ending
+
+ Reason                | Frequency     | Proportion
+ -------------         | ------------- | ------------- |   
+ Mentor change in life circumstances   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ5)))`  | `r round(sum(as.numeric(!is.na(stdfmcom$FREQpQ5)))/dim(stdfmcom)[1],digits=2)`
+ Mentee change in life circumstances   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ6)))`  | `r round(sum(as.numeric(!is.na(stdfmcom$FREQpQ6)))/dim(stdfmcom)[1],digits=2)` 
+ Mentor unfulfilled/unrealistic expectations   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ7)))`  | `r round(sum(as.numeric(!is.na(stdfmcom$FREQpQ7)))/dim(stdfmcom)[1],digits=2)`
+ Mentee unfulfilled/unrealistic expectations   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ8)))`  | `r round(sum(as.numeric(!is.na(stdfmcom$FREQpQ8)))/dim(stdfmcom)[1],digits=2)`
+ Mentor did not feel youth needed them   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ9)))`  | `r round(sum(as.numeric(!is.na(stdfmcom$FREQpQ9)))/dim(stdfmcom)[1],digits=2)`
+ Cultural differences   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ10)))`  | `r round(sum(as.numeric(!is.na(stdfmcom$FREQpQ10)))/dim(stdfmcom)[1],digits=2)`
+ Family interference/lack of support   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ11)))`  | `r round(as.numeric(!is.na(sum(stdfmcom$FREQpQ11)))/dim(stdfmcom)[1],digits=2)`
+ Lack resources to provide match support   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ12)))`  | `r round(as.numeric(!is.na(sum(stdfmcom$FREQpQ12)))/dim(stdfmcom)[1],digits=2)`
+ Unknown   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ13)))`  | `r round(sum(as.numeric(!is.na(stdfmcom$FREQpQ13)))/dim(stdfmcom)[1],digits=2)`
+ Other   | `r sum(as.numeric(!is.na(stdfmcom$FREQpQ14)))`  | `r round(sum(as.numeric(!is.na(stdfmcom$FREQpQ14)))/dim(stdfmcom)[1],digits=2)`
+
+
+#Staffing Questions
+
+Change in FTE Staff from previous year
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$STAFFpQ6)))
+knitr::kable(k,col.names=c("Change","Proportion"),digits=2)
+```
+
+```{r, echo=FALSE}
+bar <- ggplot(stdfmcom, aes(STAFFpQ6))
+bar+geom_bar()+labs(title="Staff Change from Previous Year",x="Change",y="Frequency")
+```
+
+#Budget Qestions
+Budget stability over the past three years  
+
+```{r, echo=FALSE}
+bar <- ggplot(subset(stdfmcom,!is.na(BUDGpQ2)), aes(factor(BUDGpQ2)))
+bar+geom_bar()+labs(title="Budget Stability over Past Three Years",x="Stability",y="Frequency")
+```
+
+```{r, echo=FALSE}
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ2)))
+knitr::kable(k,col.names=c("Change","Proportion"),digits=2)
+```
+
+#Budget Sources  
+
+Federal government grants  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ4)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+State government grants  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ5)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+County or municipal grants  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ6)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+K-12 school/district/LEA/ESD grants  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ7)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+Private foundation grants  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ8)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+Community foundation grants  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ9)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+United Way grants  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ10)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+Business or corporate donations  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ11)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+Private philanthropy  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ12)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+Individual donations  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ13)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+Fundraising events  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ14)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+Earned income/contracted income  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ15)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+Mentoring Parntership Support  
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$BUDGpQ16)))
+knitr::kable(k,col.names=c("Percent Range","Proportion"),digits=2)
+```
+
+#Change in Youth Served
+
+```{r, echo=FALSE}
+bar <- ggplot(stdfmcom, aes(YOUTHINCpQ1))
+bar+geom_bar()+labs(title="Stability in Number of Youth Served",x="Change",y="Frequency")
+```
+
+```{r, echo=FALSE}
+
+k<-as.data.frame(prop.table(table(stdfmcom$YOUTHINCpQ1)))
+knitr::kable(k,col.names=c("Change","Proportion"),digits=2)
+```
+
+
+ Reason               | Frequency     | Proportion
+ -------------        | ------------- | ------------- |   
+ Change in funding level   |     `r sum(stdfmcom$YOUTHINCpQ2,na.rm=TRUE)`  | `r round(sum(stdfmcom$YOUTHINCpQ2,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Change in available staffing   |     `r sum(stdfmcom$YOUTHINCpQ3,na.rm=TRUE)`  | `r round(sum(stdfmcom$YOUTHINCpQ3,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Change in community interest/demand   |     `r sum(stdfmcom$YOUTHINCpQ4,na.rm=TRUE)`  | `r round(sum(stdfmcom$YOUTHINCpQ4,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Change in number of volunteers recruited   |     `r sum(stdfmcom$YOUTHINCpQ5,na.rm=TRUE)`  | `r round(sum(stdfmcom$YOUTHINCpQ5,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Change in number of youth enrolling   |     `r sum(stdfmcom$YOUTHINCpQ6,na.rm=TRUE)`  | `r round(sum(stdfmcom$YOUTHINCpQ6,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Change in program offerings   |     `r sum(stdfmcom$YOUTHINCpQ7,na.rm=TRUE)`  | `r round(sum(stdfmcom$YOUTHINCpQ7,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
+ Other - Write In   |     `r sum(stdfmcom$YOUTHINCpQ8,na.rm=TRUE)`  | `r round(sum(stdfmcom$YOUTHINCpQ8,na.rm=TRUE)/dim(stdfmcom)[1],digits=2)`
