@@ -11,10 +11,10 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
 ```
 ```{r, echo=FALSE,warning=FALSE}
 #Set WD 
-setwd("C:/Users/mcquills/R/nmrcsurvey")
+#setwd("C:/Users/mcquills/R/nmrcsurvey")
 #setwd("C:/R/nmrcsurvey")
 #Dr. McQuillin's Home Computer
-#setwd("C:/Users/Sam/R/nmrcsurvey")
+setwd("C:/Users/Sam/R/nmrcsurvey")
 
 source("mergeclean.R")
 statefun("Pennsylvania")
