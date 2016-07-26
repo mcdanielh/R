@@ -9,7 +9,7 @@ classoption: landscape
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-```{r, echo=FALSE}
+```{r, echo=FALSE,warning=FALSE}
 #Set WD 
 setwd("C:/Users/mcquills/R/nmrcsurvey")
 #setwd("C:/R/nmrcsurvey")
