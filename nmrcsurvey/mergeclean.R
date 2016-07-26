@@ -771,7 +771,7 @@ dfm<-merge(x=dfm2,y=dfm1,by="ID",all=TRUE)
 remove(df1,df2)
 statefun<-function(state){
 	stdfm<<-subset(dfm,ORGST==state)
-
+	stf<<-state
 }
 
 

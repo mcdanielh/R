@@ -7,7 +7,7 @@ classoption: landscape
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
 ```
 ```{r, echo=FALSE}
 #Dr. McQuillins UH Office Source
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #Dr. McQuillin's Home Computer
 setwd("C:/Users/Sam/R/nmrcsurvey")
 source("mergeclean.R")
-statefun("Minnesota")
+statefun("Pennsylvania")
 ```
 #Completion Report for `r stdfm[1,28]` State
 

@@ -1,7 +1,7 @@
 ---
-title: 'Vermont Priority Program Question Results'
+title: 'Georgia Priority Program Question Results'
 author: "Samuel McQuillin"
-date: "May 16, 2016"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
 digits: 2
 ---
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
 #Dr. McQuillin's Home Computer
 setwd("C:/Users/Sam/R/nmrcsurvey")
 source("mergeclean.R")
-statefun("Vermont")
+statefun("Georgia")
 getmode <- function(v) {
    uniqv <- unique(v)
    uniqv[which.max(tabulate(match(v, uniqv)))]
