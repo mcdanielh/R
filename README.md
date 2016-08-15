@@ -1,5 +1,5 @@
 # R Projects
-Assorted Projects in R
+Public R projects for McQuillin research lab. 
 
 
   
